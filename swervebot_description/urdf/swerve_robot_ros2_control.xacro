@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<robot name="swerve_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Gazebo ROS2 Control hardware -->
+  <ros2_control name="GazeboSimSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+
+    <!-- CASTER SWIVEL JOINTS (position trajectory is the most common) -->
+    <joint name="base_frontleft_caster_joint">
+      <command_interface name="position">
+        <param name="min">-3.14159</param>
+        <param name="max"> 3.14159</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity" />
+    </joint>
+
+    <joint name="base_frontright_caster_joint">
+      <command_interface name="position">
+        <param name="min">-3.14159</param>
+        <param name="max"> 3.14159</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity" />
+    </joint>
+
+    <joint name="base_backleft_caster_joint">
+      <command_interface name="position">
+        <param name="min">-3.14159</param>
+        <param name="max"> 3.14159</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity" />
+    </joint>
+
+    <joint name="base_backright_caster_joint">
+      <command_interface name="position">
+        <param name="min">-3.14159</param>
+        <param name="max"> 3.14159</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity" />
+    </joint>
+
+    <joint name="frontleft_caster_wheel_joint">
+      <command_interface name="velocity">
+        <param name="min">-100.0</param>
+        <param name="max"> 100.0</param>
+      </command_interface>
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+    </joint>
+
+    <joint name="frontright_caster_wheel_joint">
+      <command_interface name="velocity">
+        <param name="min">-100.0</param>
+        <param name="max"> 100.0</param>
+      </command_interface>
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+    </joint>
+
+    <joint name="backleft_caster_wheel_joint">
+      <command_interface name="velocity">
+        <param name="min">-100.0</param>
+        <param name="max"> 100.0</param>
+      </command_interface>
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+    </joint>
+
+    <joint name="backright_caster_wheel_joint">
+      <command_interface name="velocity">
+        <param name="min">-100.0</param>
+        <param name="max"> 100.0</param>
+      </command_interface>
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+    </joint>
+
+  </ros2_control>
+</robot>

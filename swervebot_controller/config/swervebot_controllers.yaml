@@ -1,0 +1,39 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    caster_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    wheel_trajectory_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+
+caster_trajectory_controller:
+  ros__parameters:
+    joints:
+      - base_frontleft_caster_joint
+      - base_frontright_caster_joint
+      - base_backleft_caster_joint
+      - base_backright_caster_joint
+
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
+
+    allow_partial_joints_goal: true
+    constraints:
+      goal_time: 0.5
+      stopped_velocity_tolerance: 0.2
+
+
+wheel_trajectory_controller:
+  ros__parameters:
+    joints:
+      - frontleft_caster_wheel_joint
+      - frontright_caster_wheel_joint
+      - backleft_caster_wheel_joint
+      - backright_caster_wheel_joint
+
