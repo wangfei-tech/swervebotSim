@@ -45,7 +45,7 @@
                 </geometry>
                 <origin xyz="0 0 0" rpy="0 0 0" />
             </collision>
-            <xacro:box_inertia m="20.0" x="${caster_length}" y="${caster_width}" z="${caster_height}"
+            <xacro:box_inertia m="10.0" x="${caster_length}" y="${caster_width}" z="${caster_height}"
                             o_xyz="0 0 ${caster_height}" o_rpy="0 0 0" />
         </link>
     </xacro:macro>
