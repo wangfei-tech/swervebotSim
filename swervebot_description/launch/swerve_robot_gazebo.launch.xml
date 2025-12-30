@@ -14,11 +14,11 @@
     </node>
 
     <include file="$(find-pkg-share ros_gz_sim)/launch/gz_sim.launch.py">
-        <arg name="gz_args" value="empty.sdf -r" />
+        <arg name="gz_args" value="depot.sdf -r" />
     </include>
 
     <timer period="5.0">
-        <node pkg="ros_gz_sim" exec="create" args="-topic robot_description -name swerve_robot -x 0.0 -y 0.0 -z 1.0" />
+        <node pkg="ros_gz_sim" exec="create" args="-topic robot_description -name swerve_robot -x 0.0 -y 0.0 -z 0.05" />
     </timer>
 
     <node pkg="ros_gz_bridge" exec="parameter_bridge">
