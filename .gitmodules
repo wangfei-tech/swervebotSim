@@ -1,0 +1,15 @@
+[submodule "neo_common2"]
+	path = neo_common2
+	url = https://github.com/user247-tai/neo_common2.git
+[submodule "neo_mpc_planner2"]
+	path = neo_mpc_planner2
+	url = https://github.com/user247-tai/neo_mpc_planner2.git
+[submodule "neo_nav2_py_costmap2D"]
+	path = neo_nav2_py_costmap2D
+	url = https://github.com/user247-tai/neo_nav2_py_costmap2D.git
+[submodule "neo_srvs2"]
+	path = neo_srvs2
+	url = https://github.com/user247-tai/neo_srvs2.git
+[submodule "robot_localization"]
+	path = robot_localization
+	url = https://github.com/user247-tai/robot_localization.git
