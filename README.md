@@ -1221,18 +1221,14 @@ When the simulation fails, use this order:
 
 Robot body velocity:
 
-$$ \mathbf{v}
-\begin{bmatrix}
+$$\mathbf{v}\begin{bmatrix}
 v_x\
 v_y\
 \omega
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 For wheel (i), located at:
-$$
-(x_i,y_i)
-$$
+$$(x_i,y_i)$$
 
 relative to the robot center, the local wheel velocity is:
 
@@ -1242,19 +1238,14 @@ $$v_{iy}=v_y+\omega x_i$$
 
 Wheel speed:
 
-$$
-v_i=
+$$v_i=
 \sqrt{
 v_{ix}^2+v_{iy}^2
-}
-$$
+}$$
 
 Steering angle:
 
-$$
-\delta_i=
-\operatorname{atan2}(v_{iy},v_{ix})
-$$
+$$\delta_i=\operatorname{atan2}(v_{iy},v_{ix})$$
 
 ---
 
