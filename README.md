@@ -1211,13 +1211,13 @@ When the simulation fails, use this order:
 
 Robot body velocity:
 
-[\mathbf{v}
+$$\mathbf{v}
 \begin{bmatrix}
 v_x\
 v_y\
 \omega
 \end{bmatrix}
-]
+$$
 
 For wheel (i), located at:
 
