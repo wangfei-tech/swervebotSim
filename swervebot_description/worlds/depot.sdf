@@ -1,4 +1,5 @@
-<sdf version='1.12'>
+<?xml version="1.0"?>
+<sdf version='1.9'>
   <world name='empty'>
     <physics default="0" name="default_physics" type="ode">
       <max_step_size>0.01</max_step_size>
@@ -70,6 +71,7 @@
       <uri>model://Depot</uri>
       <name>Depot</name>
       <pose>10.364997623601234 0.60882116546404119 0 0 0 0</pose>
+      <static>true</static>
     </include>
 
     <include>
@@ -83,6 +85,7 @@
       <uri>model://cart_model_2</uri>
       <name>cart_model2_0</name>
       <pose>-1.9974497197 7.47123479843 0.010166457292935922 0 0 0</pose>
+      <static>true</static>
     </include>
 
     <include>
@@ -96,6 +99,7 @@
       <uri>model://cart_model_2</uri>
       <name>cart_model2_1</name>
       <pose>-0.0001882849 7.47123479843 0.15 0 0 0</pose>
+      <static>true</static>
     </include>
 
     <include>
@@ -109,6 +113,7 @@
       <uri>model://cart_model_2</uri>
       <name>cart_model2_2</name>
       <pose>2.01396952308 7.47123479843 0.15 0 0 0</pose>
+      <static>true</static>
     </include>
 
     <include>
@@ -122,6 +127,7 @@
       <uri>model://cart_model_2</uri>
       <name>cart_model2_3</name>
       <pose>4.98905165709 7.47123479843 0.15 0 0 0</pose>
+      <static>true</static>
     </include>
 
     <include>
@@ -135,6 +141,7 @@
       <uri>model://cart_model_2</uri>
       <name>cart_model2_4</name>
       <pose>7.00065362369 7.47123479843 0.15 0 0 0</pose>
+      <static>true</static>
     </include>
 
     <include>
@@ -148,6 +155,7 @@
       <uri>model://cart_model_2</uri>
       <name>cart_model2_5</name>
       <pose>9.00685492775 7.47123479843 0.15 0 0 0</pose>
+      <static>true</static>
     </include>
 
     <include>
@@ -196,12 +204,14 @@
       <uri>model://A_letter</uri>
       <name>A_letter</name>
       <pose>4.225921630859375 -0.89287352561950684 0.0010000000474974513 0 0 -1.5708</pose>
+      <static>true</static>
     </include>
 
     <include>
       <uri>model://B_letter</uri>
       <name>B_letter</name>
       <pose>4.225921630859375 -3.3017544746398926 0.0010000000474974513 0 0 -1.5708</pose>
+      <static>true</static>
     </include>
 
     <light name='sun' type='directional'>
