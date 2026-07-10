@@ -1221,7 +1221,7 @@ When the simulation fails, use this order:
 
 Robot body velocity:
 
-$$\mathbf{v}
+$$ \mathbf{v}
 \begin{bmatrix}
 v_x\
 v_y\
@@ -1236,11 +1236,9 @@ $$
 
 relative to the robot center, the local wheel velocity is:
 
-$$
-v_{ix}=v_x-\omega y_i
-$$
+$$v_{ix}=v_x-\omega y_i$$
 
-$$v_{iy}=v_y+\omega x_i $$
+$$v_{iy}=v_y+\omega x_i$$
 
 Wheel speed:
 
