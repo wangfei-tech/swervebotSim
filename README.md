@@ -21,7 +21,10 @@ The workspace is organized as a set of ROS 2 packages that work together as a fu
 The repository also includes a depot map, a Gazebo depot world, and AprilTag / scene assets so the robot can be exercised in a realistic simulated environment.
 
 ---
+# SwervebotSim Notes
 
+<details>
+<summary><strong>Chapter 1. Environment Setup</strong></summary>
 # Chapter 1. Environment Setup
 
 ## 1.1 Project Overview
@@ -428,6 +431,10 @@ ign gazebo ... --force-version 6
 is normal in a ROS 2 Humble environment.
 
 ---
+</details>
+
+<details>
+<summary><strong>Chapter 2. Troubleshooting </strong></summary>
 
 # Chapter 2. Troubleshooting
 
@@ -1204,6 +1211,9 @@ When the simulation fails, use this order:
 ```
 
 ---
+</details>
+<details>
+<summary><strong>Chapter 3. Swerve Kinematics and Lawn Mower Robot Research</strong></summary>
 
 # Chapter 3. Swerve Kinematics and Lawn Mower Robot Research
 
@@ -1220,34 +1230,33 @@ v_y\
 $$
 
 For wheel (i), located at:
-
-[
+$$
 (x_i,y_i)
-]
+$$
 
 relative to the robot center, the local wheel velocity is:
 
-[
+$$
 v_{ix}=v_x-\omega y_i
-]
+$$
 
-$ v_{iy}=v_y+\omega x_i $
+$$v_{iy}=v_y+\omega x_i $$
 
 Wheel speed:
 
-$
+$$
 v_i=
 \sqrt{
 v_{ix}^2+v_{iy}^2
 }
-$
+$$
 
 Steering angle:
 
-$
+$$
 \delta_i=
 \operatorname{atan2}(v_{iy},v_{ix})
-$
+$$
 
 ---
 
@@ -1264,57 +1273,57 @@ Rear Right:  (-L/2, -W/2)
 
 Front-left wheel:
 
-$
+$$
 v_{fl,x}=v_x-\omega\frac{W}{2}
-$
+$$
 
-$
+$$
 v_{fl,y}=v_y+\omega\frac{L}{2}
-$
+$$
 
 Front-right wheel:
 
-$
+$$
 v_{fr,x}=v_x+\omega\frac{W}{2}
-$
+$$
 
-$
+$$
 v_{fr,y}=v_y+\omega\frac{L}{2}
-$
+$$
 
 Rear-left wheel:
 
-$
+$$
 v_{rl,x}=v_x-\omega\frac{W}{2}
-$
+$$
 
-$
+$$
 v_{rl,y}=v_y-\omega\frac{L}{2}
-$
+$$
 
 Rear-right wheel:
 
-$
+$$
 v_{rr,x}=v_x+\omega\frac{W}{2}
-$
+$$
 
-$
+$$
 v_{rr,y}=v_y-\omega\frac{L}{2}
-$
+$$
 
 For each wheel:
 
-$
+$$
 v_i=
 \sqrt{
 v_{ix}^2+v_{iy}^2
 }
-$
+$$
 
-$
+$$
 \delta_i=
 \operatorname{atan2}(v_{iy},v_{ix})
-$
+$$
 
 ---
 
@@ -1376,13 +1385,13 @@ four-wheel swerve minus two wheels
 
 Although each individual wheel still follows:
 
-$
+$$
 v_{ix}=v_x-\omega y_i
-$
+$$
 
-$
+$$
 v_{iy}=v_y+\omega x_i
-$
+$$
 
 the complete drivetrain changes in terms of:
 
@@ -1419,28 +1428,28 @@ wz
 
 Front module:
 
-$
+$$
 v_{fx}=v_x
-$
+$$
 
-$
+$$
 v_{fy}=v_y+\omega\frac{L}{2}
-$
+$$
 
 Steering angle:
 
-$
+$$
 \delta_f=
 \operatorname{atan2}
 \left(
 v_y+\omega\frac{L}{2},
 v_x
 \right)
-$
+$$
 
 Wheel speed:
 
-$
+$$
 s_f=
 \sqrt{
 v_x^2+
@@ -1448,32 +1457,32 @@ v_x^2+
 v_y+\omega\frac{L}{2}
 \right)^2
 }
-$
+$$
 
 Rear module:
 
-$
+$$
 v_{rx}=v_x
-$
+$$
 
-$
+$$
 v_{ry}=v_y-\omega\frac{L}{2}
-$
+$$
 
 Steering angle:
 
-$
+$$
 \delta_r=
 \operatorname{atan2}
 \left(
 v_y-\omega\frac{L}{2},
 v_x
 \right)
-$
+$$
 
 Wheel speed:
 
-$
+$$
 s_r=
 \sqrt{
 v_x^2+
@@ -1481,7 +1490,7 @@ v_x^2+
 v_y-\omega\frac{L}{2}
 \right)^2
 }
-$
+$$
 
 ---
 
@@ -1515,23 +1524,23 @@ Rapid product development
 
 Differential drive kinematics:
 
-$
+$$
 v=\frac{v_r+v_l}{2}
-$
+$$
 
-$
+$$
 \omega=\frac{v_r-v_l}{L}
-$
+$$
 
 Inverse form:
 
-$
+$$
 v_l=v-\frac{\omega L}{2}
-$
+$$
 
-$
+$$
 v_r=v+\frac{\omega L}{2}
-$
+$$
 
 ---
 
@@ -1539,10 +1548,10 @@ $
 
 Simplified bicycle model:
 
-$
+$$
 \omega=
 \frac{v\tan\delta}{L}
-$
+$$
 
 Advantages:
 
